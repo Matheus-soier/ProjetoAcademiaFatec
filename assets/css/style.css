@@ -67,15 +67,21 @@ header .menu-mobile i {
 .itens-menu-mobile {
     display: none;
     flex-direction: column;
-    padding: 100px 0 0 30px;
+    justify-content: space-between;
+    padding: 30px;
     width: 100vw;
     height: 100vh;
     background-color: #fff;
     z-index: 99;
-    gap: 30px;
     position: absolute;
     top: 0;
     left: 0;
+}
+
+.itens-menu-open {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .nav-mobile {
@@ -135,11 +141,24 @@ header .menu-mobile i {
 }
 
 .sair-menu {
-    top: 20px;
-    right: 20px;
-    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sair-menu h3 {
+    font-size: 25px;
 }
 
 .sair-menu i {
     font-size: 30px;
+}
+
+.logo-menu-mobile {
+    display: flex;
+    justify-content: center;
+}
+
+.logo-menu-mobile img {
+    width: 200px;
 }
