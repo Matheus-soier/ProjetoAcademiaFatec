@@ -9,6 +9,8 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     height: 100%;
     background-color: #ffffff93;
@@ -38,7 +40,7 @@ header {
     height: 60px;
     backdrop-filter: blur(8px);
     background-color: rgba(0, 0, 0, 0.3);
-    position: relative;
+    position: fixed;
 }
 
 header .container-header {
@@ -76,6 +78,7 @@ header .menu-mobile i {
     position: absolute;
     top: 0;
     left: 0;
+    overflow: hidden;
 }
 
 .itens-menu-open {
@@ -180,7 +183,7 @@ header .menu-mobile i {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 3px;
 }
 
 .icones-lojas-menu img {
@@ -255,6 +258,28 @@ header .menu-mobile i {
     background-color: #444444f6;
 }
 
+/* Main */
+
+.banner-mobile,
+.banner-desktop,
+.banner-tablet {
+    width: 100vw;
+    height: min-content;
+    z-index: -9;
+}
+
+.banner-mobile img,
+.banner-desktop img,
+.banner-tablet img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.banner-desktop,
+.banner-tablet {
+    display: none;
+}
+
 @media (min-width: 1100px) {
     .menu-mobile {
         display: none;
@@ -265,4 +290,34 @@ header .menu-mobile i {
     }
 }
 
-/* Main */
+@media (max-width: 450px) {
+    .banner-mobile {
+        display: block;
+    }
+
+    .banner-tablet,
+    .banner-desktop {
+        display: none;
+    }
+}
+
+ @media (min-width: 451px) and (max-width: 900px) {
+    .banner-tablet {
+        display: block;
+    }
+    .banner-mobile,
+    .banner-desktop {
+        display: none;
+    }
+}
+
+@media (min-width: 901px) {
+    .banner-desktop {
+        display: block;
+    }
+
+    .banner-tablet,
+    .banner-mobile {
+        display: none;
+    }
+}
