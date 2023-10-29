@@ -279,6 +279,8 @@ header .menu-mobile i {
     display: none;
 }
 
+/* Medias */
+
 @media (min-width: 1100px) {
     .menu-mobile {
         display: none;
