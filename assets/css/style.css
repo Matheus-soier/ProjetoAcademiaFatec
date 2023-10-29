@@ -78,6 +78,8 @@ header .menu-mobile i {
     position: absolute;
     top: 0;
     left: 0;
+    gap: 30px;
+    overflow-x: scroll;
 }
 
 .itens-menu-open {
@@ -263,7 +265,7 @@ header .menu-mobile i {
 .banner-desktop,
 .banner-tablet {
     width: 100vw;
-    height: min-content;
+    /* height: min-content; */
     z-index: -9;
 }
 
