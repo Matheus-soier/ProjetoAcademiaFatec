@@ -234,7 +234,7 @@ header .menu-mobile i {
     display: flex;
     gap: 10px;
     align-items: center;
-    color: #fff;
+    color: #ffffff;
     padding: 8px 18px;
     border-radius: 10px;
     transition: all .3s ease-in-out;
@@ -245,7 +245,8 @@ header .menu-mobile i {
 }
 
 .user-area a:nth-child(2) {
-    background-color: #000000;
+    color: #000;
+    background-color: #ffffff;
 }
 
 .user-area a:nth-child(1):hover {
@@ -253,8 +254,7 @@ header .menu-mobile i {
 }
 
 .user-area a:nth-child(2):hover {
-    color: #ffffff;
-    background-color: #444444f6;
+    background-color: #aaaaaa;
 }
 
 /* Main */
