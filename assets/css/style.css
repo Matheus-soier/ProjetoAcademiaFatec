@@ -79,7 +79,7 @@ header .menu-mobile i {
     top: 0;
     left: 0;
     gap: 30px;
-    overflow-x: scroll;
+    overflow-y: scroll;
 }
 
 .itens-menu-open {
