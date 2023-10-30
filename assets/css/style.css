@@ -74,12 +74,11 @@ header .menu-mobile i {
     width: 100vw;
     height: 100vh;
     background-color: #fff;
-    z-index: 99;
     position: absolute;
     top: 0;
     left: 0;
     transition: visibility 0s, opacity 0.3s;
-    overflow: hidden;
+    z-index: 9;
 }
 
 .container-menu-mob {
@@ -309,6 +308,7 @@ header .menu-mobile i {
     text-transform: uppercase;
     padding-bottom: 35px;
     font-size: 1.2rem;
+    z-index: -1;
 }
 
 .titulo h2:nth-child(2) {
