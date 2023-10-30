@@ -89,7 +89,6 @@ header .menu-mobile i {
     gap: 15px;
     width: 100vw;
     height: 100vh;
-    max-height: 100vh;
 }
 
 .itens-menu-mobile.show-menu {
