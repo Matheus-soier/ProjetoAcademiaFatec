@@ -39,7 +39,7 @@ header {
     justify-content: center;
     width: 100vw;
     height: 60px;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(3px);
     background-color: rgba(0, 0, 0, 0.3);
     position: fixed;
 }
@@ -261,10 +261,76 @@ header .menu-mobile i {
     background-color: #ff0000;
 }
 
-.user-area a:nth-child(2) {
-    color: #000;
-    background-color: #ffffff;
-}
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 10px 30px;
+    border: 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.02s;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    z-index: 0;
+    box-shadow: 0 0px 7px -5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+  }
+
+  .button i {
+    font-size: 20px;
+  }
+  
+  .button:hover {
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+  }
+  
+  .button:active {
+    transform: scale(0.97);
+  }
+  
+  .hoverEffect {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  
+  .hoverEffect div {
+    background: rgb(222,0,75);
+    background: linear-gradient(90deg, rgba(222,0,75,1) 0%, rgb(255, 255, 255) 49%, rgba(0,212,255,1) 100%);
+    border-radius: 40rem;
+    width: 100px;
+    height: 50px;
+    transition: 0.4s;
+    filter: blur(20px);
+    animation: effect infinite 3s linear;
+    opacity: 0.3;
+  }
+  
+  .button:hover .hoverEffect div {
+    width: 8rem;
+    height: 8rem;
+  }
+  
+  @keyframes effect {
+  
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 
 .user-area a:nth-child(1):hover {
     background-color: #c90000f6;
@@ -484,7 +550,66 @@ header .menu-mobile i {
     font-size: 10px;
 }
 
+.aplicativo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 100vw;
+    background-color: #000000;
+    gap: 20px;
+}
 
+.left-app {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    color: #ffffff;
+}
+
+.app-info h3 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+.app-info p {
+    margin-left: 30px;
+    font-size: 1.2rem;
+}
+
+.info-app h3 {
+    text-transform: uppercase;
+}
+
+.download-app {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.qrcode-app img {
+    width: 180px;
+    border-radius: 5px;
+}
+
+.lojas {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;    
+}
+
+.lojas img {
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+.right-app img {
+    width: 350px;
+}
 
 /* Medias */
 
@@ -520,6 +645,9 @@ header .menu-mobile i {
     .planos-container {
         width: 800px;
     }
+    .right-app img {
+        width: 300px;
+    }
 }
 
 @media (min-width: 901px) {
@@ -542,6 +670,27 @@ header .menu-mobile i {
     .borda-inferior-esquerda,
     .borda-superior-direita {
         display: none;
+    }
+   
+}
+
+@media (max-width: 800px) {
+    .right-app img {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .aplicativo {
+        height: min-content;
+    }
+
+    .aplicativo h3 {
+        font-size: 1.5rem;
+    }
+    .download-app {
+    flex-direction: column;
+    gap: 15px;
     }
 }
 
