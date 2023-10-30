@@ -398,6 +398,7 @@ header .menu-mobile i {
     height: min-content;
     padding: 40px 0;
     background-color: #000;
+    z-index: -2;
 }
 
 .borda-superior-direita {
