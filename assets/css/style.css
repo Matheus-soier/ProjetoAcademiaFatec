@@ -296,7 +296,7 @@ header .menu-mobile i {
     display: none;
 }
 
-.container-atividades {
+.container {
     padding: 40px 0;
     display: flex;
     flex-direction: column;
@@ -314,10 +314,13 @@ header .menu-mobile i {
 .titulo h2:nth-child(2) {
     position: absolute;
     font-size: 2.8rem;
-    top: -12px;
-    left: -45px;
     color: #ff000044;
     z-index: -1;
+}
+
+.atv h2:nth-child(2) {
+    top: -12px;
+    left: -45px;
 }
 
 .atividades {
@@ -380,6 +383,107 @@ header .menu-mobile i {
     z-index: 2;
 }
 
+.pln h2:nth-child(2) {
+    top: -12px;
+    left: -30px;
+}
+
+.planos-container {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 1000px;
+    height: min-content;
+    padding: 40px 0;
+    background-color: #000;
+}
+
+.borda-superior-direita {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-left: 120px solid transparent;
+    border-top: 120px solid rgb(255, 255, 255);
+}
+
+.borda-inferior-esquerda {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-right: 120px solid transparent;
+    border-bottom: 120px solid rgb(255, 255, 255);
+}
+
+.planos {
+    display: flex;
+    width: 250px;
+    height: 360px;
+    background-color: #fff;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.anual {
+    border: 3px solid #ff0000;
+}
+
+.planos h3 {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    line-height: 28px;
+    text-align: center;
+    margin-bottom: -20px;
+}
+
+.planos h3 span {
+    color: #ff0000;
+}
+
+.item-plano {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.item-plano i {
+    font-size: 25px;
+}
+
+.item-plano p {
+    text-transform: uppercase;
+    line-height: 20px;
+}
+
+.btn-planos a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 7px 25px;
+    border-radius: 20px;
+    background-color: #ff0000;
+    transition: all .3s ease-in-out;
+}
+
+.btn-planos a:hover {
+    background-color: #b00101;
+}
+
+.btn-planos a span {
+    color: #fff;
+    font-size: 10px;
+}
+
+
 
 /* Medias */
 
@@ -397,21 +501,45 @@ header .menu-mobile i {
         font-size: 1.5rem;
     }
     
-    .titulo h2:nth-child(2) {
+    .atv h2:nth-child(2) {
         font-size: 4.6rem;
         top: -30px;
-        left: -115px;
+        left: -100px;
+    }
+
+    .pln h2:nth-child(2) {
+        font-size: 4.6rem;
+        top: -30px;
+        left: -70px;
     }
     
 }
 
-@media (max-width: 450px) {
-    .banner-mobile {
+@media (max-width: 1100px) {
+    .planos-container {
+        width: 800px;
+    }
+}
+
+@media (min-width: 901px) {
+    .banner-desktop {
         display: block;
     }
 
     .banner-tablet,
-    .banner-desktop {
+    .banner-mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 850px) {
+    .planos-container {
+        flex-direction: column;
+        width: 100vw;
+    }
+
+    .borda-inferior-esquerda,
+    .borda-superior-direita {
         display: none;
     }
 }
@@ -424,15 +552,15 @@ header .menu-mobile i {
     .banner-desktop {
         display: none;
     }
-}
+ }
 
-@media (min-width: 901px) {
-    .banner-desktop {
+@media (max-width: 450px) {
+    .banner-mobile {
         display: block;
     }
 
     .banner-tablet,
-    .banner-mobile {
+    .banner-desktop {
         display: none;
     }
 }
