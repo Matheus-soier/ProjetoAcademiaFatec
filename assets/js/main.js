@@ -1,15 +1,24 @@
 const entrarMenu = document.querySelector('#entrar-menu');
 const sairMenu = document.querySelector('#sair-menu');
 const menuMobile = document.querySelector('.itens-menu-mobile');
+const body = document.body;
 
 entrarMenu.addEventListener('click', () => {
-    if(menuMobile.style.display === 'none' || menuMobile.style.display === '') {
-        menuMobile.style.display = 'flex';
-    }
-})
+    menuMobile.classList.add('show-menu');
+    body.classList.add('no-scroll');
+    disableScroll();
+});
 
 sairMenu.addEventListener('click', () => {
-    if(menuMobile.style.display === 'flex') {
-        menuMobile.style.display = 'none';
-    }
-})
+    menuMobile.classList.remove('show-menu');
+    body.classList.remove('no-scroll');
+    enableScroll();
+});
+
+function disableScroll() {
+    body.style.overflow = 'hidden';
+}
+
+function enableScroll() {
+    body.style.overflow = 'auto';
+}
