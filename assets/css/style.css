@@ -69,6 +69,7 @@ header .menu-mobile i {
 .itens-menu-mobile {
     display: none;
     flex-direction: column;
+    justify-content: space-between;
     padding: 30px;
     width: 100vw;
     height: 100vh;
@@ -77,8 +78,7 @@ header .menu-mobile i {
     position: absolute;
     top: 0;
     left: 0;
-    gap: 120px;
-    overflow-y: scroll;
+    gap: 15px;
 }
 
 .itens-menu-open {
