@@ -31,6 +31,7 @@ a {
     background-color: #ff0000c6;
 }
 
+
 /* Header */
 
 header {
@@ -42,6 +43,7 @@ header {
     backdrop-filter: blur(3px);
     background-color: rgba(0, 0, 0, 0.3);
     position: fixed;
+    z-index: 5;
 }
 
 header .container-header {
@@ -73,8 +75,9 @@ header .menu-mobile i {
     opacity: 0;
     width: 100vw;
     height: 100vh;
+    max-height: 100vh;
     background-color: #fff;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     transition: visibility 0s, opacity 0.3s;
@@ -89,6 +92,7 @@ header .menu-mobile i {
     gap: 15px;
     width: 100vw;
     height: 100vh;
+    max-height: 100vh;
 }
 
 .itens-menu-mobile.show-menu {
@@ -411,8 +415,6 @@ header .menu-mobile i {
     background-color: #000;
     margin-bottom: 10px;
     position: relative;
-    z-index: -2;
-  
 }
 
 .card img {
@@ -422,6 +424,7 @@ header .menu-mobile i {
     object-fit: cover;
     object-position: center center;
     transition: all .3s ease-in-out;
+
 }
 
 .sombra {
@@ -448,6 +451,11 @@ header .menu-mobile i {
     line-height: 25px;
     z-index: 2;
 }
+.carrousel:hover :not(:hover) img,
+.carrousel:hover :not(:hover) h3{
+    opacity: 0.7;
+    filter: saturate(0%);
+}
 
 .pln h2:nth-child(2) {
     top: -12px;
@@ -464,7 +472,6 @@ header .menu-mobile i {
     height: min-content;
     padding: 40px 0;
     background-color: #000;
-    z-index: -2;
 }
 
 .borda-superior-direita {
