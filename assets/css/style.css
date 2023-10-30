@@ -300,7 +300,24 @@ header .menu-mobile i {
 .container-atividades {
     padding: 40px 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo {
+    position: relative;
+    text-transform: uppercase;
+    padding-bottom: 35px;
+    font-size: 1.2rem;
+}
+
+.titulo h2:nth-child(2) {
+    position: absolute;
+    font-size: 2.8rem;
+    top: -12px;
+    left: -45px;
+    color: #ff000044;
+    z-index: -1;
 }
 
 .atividades {
@@ -374,7 +391,17 @@ header .menu-mobile i {
     .user-area {
         display: flex;
     }
-
+    
+    .titulo {
+        padding-bottom: 35px;
+        font-size: 1.5rem;
+    }
+    
+    .titulo h2:nth-child(2) {
+        font-size: 4.6rem;
+        top: -30px;
+        left: -115px;
+    }
     
 }
 
