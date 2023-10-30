@@ -78,7 +78,6 @@ header .menu-mobile i {
     position: absolute;
     top: 0;
     left: 0;
-    overflow-y: auto;
     transition: visibility 0s, opacity 0.3s;
 }
 
@@ -91,7 +90,6 @@ header .menu-mobile i {
     width: 100vw;
     height: 100vh;
     max-height: 100vh;
-    overflow: hidden;
 }
 
 .itens-menu-mobile.show-menu {
@@ -329,8 +327,8 @@ header .menu-mobile i {
     align-items: center;
     justify-content: center;
     background-color: #000;
-    z-index: -2;
     margin-bottom: 10px;
+    z-index: -2;
 }
 
 .card img {
@@ -341,6 +339,8 @@ header .menu-mobile i {
     opacity: 0.7;
     z-index: -1;
 }
+
+
 
 /* Medias */
 
