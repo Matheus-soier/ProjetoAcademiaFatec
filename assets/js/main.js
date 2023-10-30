@@ -10,3 +10,4 @@ entrarMenu.addEventListener('click', () => {
 sairMenu.addEventListener('click', () => {
     menuMobile.classList.remove('show-menu');
 });
+
