@@ -18,7 +18,7 @@ body {
     width: 100%;
     height: 100%;
     background-color: #ffffff93;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 
 a {
@@ -508,6 +508,10 @@ header .menu-mobile i {
     gap: 20px;
 }
 
+.aplicativo h3 {
+    line-height: 26px;
+}
+
 .left-app {
     display: flex;
     flex-direction: column;
@@ -552,12 +556,13 @@ header .menu-mobile i {
     flex-direction: column;
     width: 180px;
     border: 2px solid #fff;
-    border-radius: 5px;
+    border-radius: 10px;
     transition: all .3s ease-in-out;
 }
 
 .lojas img:hover {
     border: 2px solid #ff0000;
+    border-radius: 10px;
 }
 
 .right-app img {
@@ -799,6 +804,15 @@ footer {
 @media (max-width: 800px) {
     .right-app img {
         display: none;
+    }
+    .aplicativo {
+        background-color: #fff;
+    }
+    .left-app {
+        color: #000;
+    }
+    .lojas {
+        gap: 0;
     }
 }
 
