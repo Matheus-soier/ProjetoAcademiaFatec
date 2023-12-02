@@ -1,0 +1,88 @@
+@import url(style.css);
+
+.formulario-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 0 80px 0;
+}
+
+.atv h2:nth-child(2) {
+    top: -12px;
+    left: -20px;
+}
+
+form fieldset div{
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    max-width: 350px;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border: 0;
+}
+
+form fieldset label {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+button {
+    border: 0;
+    background-color: #ff0000;
+    padding: 10px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 8px;
+    width: 100%;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+button:hover {
+    background-color: #b00101;
+}
+
+div input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid black;
+    outline: 0;
+}
+
+input[type="password"], input[type="text"] {
+    border: 0;
+    width: 100%;
+}
+
+.passlogin {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.passlogin i {
+    font-size: 18px;
+    cursor: pointer;
+    padding-right: 8px;
+}
+
+@media (min-width: 1100px) {
+    .atv h2:nth-child(2) {
+        top: -30px;
+        left: -50px;
+    }
+}
