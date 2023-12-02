@@ -733,6 +733,10 @@ footer {
     color: rgb(255, 0, 0);
 }
 
+footer form {
+    width: 100%;
+}
+
 
 /* Medias */
 
