@@ -1,4 +1,3 @@
-
 const entrarMenu = document.querySelector('#entrar-menu');
 const sairMenu = document.querySelector('#sair-menu');
 const menuMobile = document.querySelector('.itens-menu-mobile');
